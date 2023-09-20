@@ -40,5 +40,5 @@ $anti-drone-theme: mat.define-light-theme((
   margin-bottom: 0;
 }
 
-html, body { height: 100%; }
+html, body { height: 100%; overflow-x: hidden;}
 body { font-family: Roboto, "Helvetica Neue", sans-serif; }
