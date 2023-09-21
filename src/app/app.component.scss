@@ -79,6 +79,10 @@ $content_text_margin_top: 30px;
 main{
     font-family: Akshar;
 
+    & .container-fluid:nth-of-type(1) .content .text{
+        margin-top: 60px;
+    }
+
     .container-fluid{
         background: $background;
         min-height: 100vh;
@@ -104,10 +108,10 @@ main{
             gap: 55px;
             width: 90%;
             justify-content: space-around;
-    
+
             .text{
                 width: 667px;
-                margin-top: 95px;
+                margin-top: 150px;
     
                 h3{
                     color: #34495D;
@@ -118,14 +122,6 @@ main{
                     span{
                         color: #F8BE39;
                     }
-                }
-    
-                h5{
-                    color: #000;
-                    font-size: 40px;
-                    font-weight: 400;
-                    margin-top: 20px;
-                    margin-bottom: 0;
                 }
     
                 p{
@@ -146,21 +142,18 @@ main{
                     border: none;
                     margin-top: $content_text_margin_top;
     
-                    p{
-                        color: #FFF;
-                        font-size: 18px;
-                        font-weight: 500;
-                        line-height: 149%;
-                        margin-bottom: 0;
-                        width: 100%;
-                        margin-top: 0;
-                    }
+                    color: #FFF;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 149%;
                 }
             }
     
             .image{
-                width: 475px;
-                height: 670px;
+                width: 400px;
+                height: 595px;
+
+                overflow: hidden;
     
                 display: flex;
                 justify-content: center;
@@ -169,8 +162,8 @@ main{
     
                 img{
 
-                    width: 348px;
-                    height: 486px;
+                    width: 800px;
+                    height: 500px;
                 }
             }
 
@@ -178,7 +171,7 @@ main{
     
         .background_header{
             position: absolute;
-            top: 620px;
+            top: 590px;
             left: 5%;
             
             font-size: 300px;
@@ -205,7 +198,7 @@ main{
 
     //untypical img size
     $container_number: 3, 4;
-    $img_sizes: 460px 452px, 451px 278px 346px 223px;
+    $img_sizes: 785px 452px, 770px 330px 670px 290px;
 
     @for $i from 1 through 2{
 
@@ -266,14 +259,6 @@ main{
         }
     }
 
-}
-
-.ball{
-    position: fixed;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #5f5a5a;
 }
 
 @media (max-width: 1300px)
@@ -354,10 +339,6 @@ main{
                 .text{
                     h3{
                         font-size: 70px !important;
-                    }
-                    
-                    h5{
-                        font-size: 30px !important;
                     }
                 }
             }

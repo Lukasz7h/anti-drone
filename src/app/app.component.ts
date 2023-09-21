@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { MouseService } from './mouse/mouse.service';
 
 @Component({
   selector: 'app-root',
@@ -6,15 +7,21 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
 
-  title = 'anti-drone';
+  constructor(private mouseService: MouseService){}
+
+  title: string = 'anti-drone';
 
   @ViewChild("nav_list")
   navList: ElementRef | undefined;
 
   @ViewChild("bar_menu")
   barMenu: ElementRef | undefined;
+
+  ngOnInit(): void {
+    this.mouseService.setMouseStyle();
+  }
 
   ngAfterViewInit(): void {
 
