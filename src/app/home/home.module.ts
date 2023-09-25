@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from './home.component';
 import { DetailsComponent } from './details/details.component';
+
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({

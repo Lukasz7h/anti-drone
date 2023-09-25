@@ -47,12 +47,14 @@ export class DetailsComponent implements AfterViewInit{
 
       function show(): void
       {
+        console.log(flag)
         if(!flag) return;
 
         that.button.nativeElement.style.opacity = 0;
 
         setTimeout(() => {
           that.button.nativeElement.style.display = "none";
+          flag = true;
         }, 1200);
 
         flag = false;
@@ -80,6 +82,9 @@ export class DetailsComponent implements AfterViewInit{
   hideDetails(): void
   {
     this.properties = null;
+    this.button.nativeElement.style.display = "block";
+
+    this.button.nativeElement.style.opacity = 1;
   }
 
 }

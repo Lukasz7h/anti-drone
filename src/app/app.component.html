@@ -4,17 +4,12 @@
 
   <div #nav_list class="nav-list">
     <ul>
-      <li>Home</li>
+      <li routerLink="/">Home</li>
       <li routerLink="products">Products</li>
       <li>Contact</li>
-      <li>News</li>
+      <li routerLink="news">News</li>
       <li>Videos</li>
     </ul>
-
-    <img class="line" src="./assets/images/nav-line.png" alt="line">
-    <img src="./assets/images/basket.png" alt="basket">
-
-    <img class="sign" src="./assets/images/sign.png" alt="sign">
 
   </div>
 
@@ -25,13 +20,5 @@
 </nav>
 
 <main>
-  <app-home></app-home>
+  <router-outlet></router-outlet>
 </main>
-
-<div id="counter">
-  <span>01</span>
-  <span class="line"></span>
-  <span>04</span>
-</div>
-
-<router-outlet></router-outlet>

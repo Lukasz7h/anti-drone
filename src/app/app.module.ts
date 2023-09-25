@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 
 import {MatIconModule} from '@angular/material/icon';
 import { HomeModule } from './home/home.module';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
