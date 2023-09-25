@@ -3,6 +3,7 @@ import { fromEvent } from 'rxjs/internal/observable/fromEvent';
 
 import { imagesPath } from 'src/app/path';
 import { data } from './paticularDetails';
+
 import { generalDetails, particularDetails } from '../detailsTypes';
 
 @Component({
@@ -74,6 +75,11 @@ export class DetailsComponent implements AfterViewInit{
   protected checkType(data: string | string[]): boolean
   {
     return typeof data != "object";
+  }
+
+  hideDetails(): void
+  {
+    this.properties = null;
   }
 
 }
